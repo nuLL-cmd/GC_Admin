@@ -62,11 +62,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-    public void addIten(View view){
-        AlertDialog insertItem = new AlertDialog.Builder(this).create();
-        View itemView = getLayoutInflater().inflate(R.layout.layout_add_item,null);
-        insertItem.setView(itemView);
-    }
 
 }
 
