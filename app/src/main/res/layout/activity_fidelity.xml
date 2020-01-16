@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="activity.UsersActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@drawable/background_relative_users"
+        android:id="@+id/relative_details_cut">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="casual"
+            android:text="Fidelidade\nTotal: "
+            android:textColor="#fff"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_pedido"
+        android:layout_alignStart="@id/relative_details_cut"
+        android:layout_alignEnd="@id/relative_details_cut"
+        tools:listitem="@layout/layout_celula_fidelity"
+        android:layout_marginTop="-20dp"
+
+        android:layout_below="@id/relative_details_cut"/>
+
+
+</RelativeLayout>

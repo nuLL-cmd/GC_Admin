@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_celula_cut"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    app:cardCornerRadius="6dp">
+
+    <RelativeLayout
+        android:id="@+id/relative_card_celula_cut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_card_cut"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/card_blue" />
+
+        <TextView
+            android:id="@+id/txt_data_celula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_card_cut"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Marco Aurelio Jose"
+            android:textColor="#115D9F"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+            android:id="@+id/txt_price_celula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/txt_data_celula"
+            android:layout_below="@id/txt_data_celula"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:text="Ttotal de compras:"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_buy_celula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/txt_price_celula"
+            android:layout_alignTop="@id/txt_price_celula"
+            android:layout_alignBottom="@id/txt_price_celula"
+            android:layout_marginStart="10dp"
+            android:text="8"
+            android:textColor="#F30606"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
