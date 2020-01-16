@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     public void nextActivityCardapio(View view){
         if (!CardapioActivity.status){
             Intent intent = new Intent(this, CardapioActivity.class);
-            //startActivity(intent);
+            startActivity(intent);
 
         }
     }
