@@ -1,5 +1,6 @@
 package com.automatodev.gcadmin.activity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -59,8 +60,12 @@ public class MainActivity extends AppCompatActivity {
         if (!CardapioActivity.status){
             Intent intent = new Intent(this, CardapioActivity.class);
             startActivity(intent);
-
         }
+    }
+    public void addIten(View view){
+        AlertDialog insertItem = new AlertDialog.Builder(this).create();
+        View itemView = getLayoutInflater().inflate(R.layout.layout_add_item,null);
+        insertItem.setView(itemView);
     }
 
 }
