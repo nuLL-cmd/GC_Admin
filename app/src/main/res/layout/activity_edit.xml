@@ -212,19 +212,32 @@
 
             <Button
                 android:id="@+id/btn_att_edit"
-                android:layout_width="300dp"
+                android:layout_width="150d"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/edt_descFive_edit"
-                android:layout_centerHorizontal="true"
+                android:layout_alignParentEnd = "true"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/background_btn_login"
                 android:fontFamily="@font/akronim"
+                android:layout_alignEnd = "@id/edt_descFive_edit"
                 android:text="Atualizar"
                 android:textColor="#fff"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
+
+            <EditText
+                android:id="@+id/edt_price_edit"
+                android:layout_width="150dp"
+                android:layout_height="30sp"
+                android:layout_below="@id/edt_descFive_edit"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignStart = "@id/edt_descFive_edit"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_edt"
+                android:hint="Ingrediente quatro"
+                android:paddingStart="10dp" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>
