@@ -2,6 +2,8 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="1dp"
     android:padding="5dp">
 
     <RelativeLayout
@@ -9,20 +11,30 @@
         android:layout_height="match_parent"
         android:id="@+id/relative_layout_celula"
         android:padding="10dp">
-
-        <ImageView
-            android:id="@+id/img_cardapio_layout_celula"
+        <androidx.cardview.widget.CardView
             android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/background_img_layout_cardapio" />
+            android:id="@+id/card_img_dish"
+            app:cardCornerRadius="10dp"
+            android:layout_height="100dp">
+            <ImageView
+                android:id="@+id/img_cardapio_layout_celula"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/background_img_layout_cardapio" />
+
+
+        </androidx.cardview.widget.CardView>
+
 
         <TextView
             android:id="@+id/txt_item_title_layout_celula"
             android:layout_width="wrap_content"
+            android:layout_marginEnd="3dp"
             android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/lbl_price_layout_celula"
             android:layout_marginStart="10dp"
-            android:layout_toEndOf="@id/img_cardapio_layout_celula"
+            android:layout_toEndOf="@id/card_img_dish"
             android:text="Jantinha 1"
             android:textStyle="bold" />
 
@@ -31,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toStartOf="@id/txt_price_layout_celula"
-            android:text="Valor R$"
+            android:text="R$"
             android:textAlignment="center"
             android:textStyle="bold" />
 
@@ -54,7 +66,7 @@
             android:layout_below="@id/txt_item_title_layout_celula"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_toEndOf="@id/img_cardapio_layout_celula"
+            android:layout_toEndOf="@id/card_img_dish"
             android:text="Acompanhamento"
             android:textStyle="bold" />
 
@@ -65,7 +77,7 @@
             android:layout_below="@id/txt_desc_layout_celula"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:layout_toEndOf="@id/img_cardapio_layout_celula"
+            android:layout_toEndOf="@id/card_img_dish"
             android:text="Contra-filé" />
 
         <TextView
@@ -76,7 +88,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
 
-            android:layout_toEndOf="@id/img_cardapio_layout_celula"
+            android:layout_toEndOf="@id/card_img_dish"
             android:text="Toque editar"
             android:textAlignment="center"
             android:textSize="12sp" />

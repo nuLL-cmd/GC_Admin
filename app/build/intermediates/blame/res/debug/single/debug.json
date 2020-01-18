@@ -1348,6 +1348,10 @@
         "source": "C:\\Users\\nuLL\\.gradle\\caches\\transforms-2\\files-2.1\\81efca949d99855e5e3f6d718bc8d1fe\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
+        "merged": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_dish.xml.flat",
+        "source": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\src\\main\\res\\layout\\activity_dish.xml"
+    },
+    {
         "merged": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gift_96.png.flat",
         "source": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\src\\main\\res\\drawable\\gift_96.png"
     },
@@ -1362,10 +1366,6 @@
     {
         "merged": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_cardapio_sgv.png.flat",
         "source": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_cardapio_sgv.png"
-    },
-    {
-        "merged": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_cardaptio.xml.flat",
-        "source": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\src\\main\\res\\layout\\activity_cardaptio.xml"
     },
     {
         "merged": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action.xml.flat",
@@ -2196,12 +2196,12 @@
         "source": "C:\\Users\\nuLL\\.gradle\\caches\\transforms-2\\files-2.1\\81efca949d99855e5e3f6d718bc8d1fe\\appcompat-1.1.0\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_card_giftcard_black_24dp.xml.flat",
-        "source": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\src\\main\\res\\drawable\\ic_card_giftcard_black_24dp.xml"
-    },
-    {
         "merged": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_add_item.xml.flat",
         "source": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\src\\main\\res\\layout\\layout_add_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_card_giftcard_black_24dp.xml.flat",
+        "source": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\src\\main\\res\\drawable\\ic_card_giftcard_black_24dp.xml"
     },
     {
         "merged": "C:\\Users\\nuLL\\Desktop\\ANDDROID PROJETOS\\GCAdmin\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_people_48dp.xml.flat",

@@ -149,10 +149,10 @@ activity#com.automatodev.gcadmin.activity.EditActivity
 ADDED from C:\Users\nuLL\Desktop\ANDDROID PROJETOS\GCAdmin\app\src\main\AndroidManifest.xml:14:9-16:20
 	android:name
 		ADDED from C:\Users\nuLL\Desktop\ANDDROID PROJETOS\GCAdmin\app\src\main\AndroidManifest.xml:14:19-56
-activity#com.automatodev.gcadmin.activity.CardapioActivity
-ADDED from C:\Users\nuLL\Desktop\ANDDROID PROJETOS\GCAdmin\app\src\main\AndroidManifest.xml:17:9-63
+activity#com.automatodev.gcadmin.activity.DishActivity
+ADDED from C:\Users\nuLL\Desktop\ANDDROID PROJETOS\GCAdmin\app\src\main\AndroidManifest.xml:17:9-59
 	android:name
-		ADDED from C:\Users\nuLL\Desktop\ANDDROID PROJETOS\GCAdmin\app\src\main\AndroidManifest.xml:17:19-60
+		ADDED from C:\Users\nuLL\Desktop\ANDDROID PROJETOS\GCAdmin\app\src\main\AndroidManifest.xml:17:19-56
 activity#com.automatodev.gcadmin.activity.UsersActivity
 ADDED from C:\Users\nuLL\Desktop\ANDDROID PROJETOS\GCAdmin\app\src\main\AndroidManifest.xml:18:9-20:52
 	android:screenOrientation

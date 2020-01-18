@@ -14,7 +14,7 @@
         <activity android:name=".activity.EditActivity">
 
         </activity>
-        <activity android:name=".activity.CardapioActivity" />
+        <activity android:name=".activity.DishActivity" />
         <activity
             android:name=".activity.UsersActivity"
             android:screenOrientation="portrait" />

@@ -1247,6 +1247,7 @@ id btn_settings_main
 id buttonPanel
 id card_cardapio_details
 id card_celula_cut
+id card_img_dish
 id card_img_edit
 id card_login
 id card_menu_main
@@ -1280,13 +1281,14 @@ id dimensions
 id direct
 id disableHome
 id edit_query
-id edt_descFive_edit
-id edt_descFour_edit
-id edt_descOne_edit
-id edt_descTree_edit
-id edt_descTwo_edit
+id edt_dishFive_edit
+id edt_dishFour_edit
+id edt_dishOne_edit
+id edt_dishPrice_edit
+id edt_dishTree_edit
+id edt_dishTwo_edit
+id edt_dish_edit
 id edt_email_login
-id edt_nome_edit
 id edt_password_login
 id edt_register_login
 id end
@@ -1333,6 +1335,7 @@ id left
 id light
 id line1
 id line3
+id linear_edit
 id listMode
 id list_item
 id mask
@@ -1363,7 +1366,7 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
-id recycler_cardapio
+id recycler_dish
 id recycler_pedido
 id recycler_users
 id relative_card_celula_cut
@@ -1539,7 +1542,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_cardaptio
+layout activity_dish
 layout activity_edit
 layout activity_fidelity
 layout activity_login

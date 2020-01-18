@@ -28,7 +28,7 @@
         android:theme="@style/AppTheme" >
         <activity android:name="com.automatodev.gcadmin.activity.EditActivity" >
         </activity>
-        <activity android:name="com.automatodev.gcadmin.activity.CardapioActivity" />
+        <activity android:name="com.automatodev.gcadmin.activity.DishActivity" />
         <activity
             android:name="com.automatodev.gcadmin.activity.UsersActivity"
             android:screenOrientation="portrait" />

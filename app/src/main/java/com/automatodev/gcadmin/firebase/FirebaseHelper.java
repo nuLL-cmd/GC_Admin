@@ -5,11 +5,13 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
 import com.automatodev.gcadmin.R;
 import com.automatodev.gcadmin.activity.MainActivity;
+import com.automatodev.gcadmin.provider.DishProvider;
 import com.automatodev.gcadmin.provider.UserProvider;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -20,6 +22,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FirebaseHelper {
     private Activity context;
@@ -106,6 +113,26 @@ public class FirebaseHelper {
 
             }
         });
+    }
+
+    public List<DishProvider> fireDishGet(){
+        final List<DishProvider> dishProviderList = new ArrayList<>();
+        firebaseFirestore.collection("userAdmin").document("cardapio")
+                .collection("pratos").get()
+                .addOnCompleteListener(context, new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                       dishProviderList.clear();
+                       if (task.isSuccessful()){
+                           for (QueryDocumentSnapshot doc: task.getResult()){
+                               dishProviderList.add(doc.toObject(DishProvider.class));
+                           }
+                       }
+                        Toast.makeText(context, "teste: "+dishProviderList.get(0).getDishName(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+        return dishProviderList;
     }
 }
 
