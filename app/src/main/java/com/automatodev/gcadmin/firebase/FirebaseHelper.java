@@ -3,6 +3,7 @@ package com.automatodev.gcadmin.firebase;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,6 +16,7 @@ import com.automatodev.gcadmin.provider.DishProvider;
 import com.automatodev.gcadmin.provider.UserProvider;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,6 +26,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,12 +44,13 @@ public class FirebaseHelper {
     private FirebaseFirestore firebaseFirestore;
     private FirebaseAuth firebaseAuth;
     private DocumentReference documentReference;
-
+    private FirebaseStorage firebaseStorage;
     public FirebaseHelper(Activity context) {
 
         this.context = context;
         firebaseFirestore = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
+        firebaseStorage = FirebaseStorage.getInstance();
     }
 
     public void fireLogin(final String userName, final String userPassword) {
@@ -133,6 +139,40 @@ public class FirebaseHelper {
                 });
 
         return dishProviderList;
+    }
+
+    public void fireSaveDish(final DishProvider dishProvider, Uri uri) {
+        final StorageReference storageReference = firebaseStorage.getReference("/image/"+dishProvider.getDishUid());
+        storageReference.putFile(uri).addOnSuccessListener(context, new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                storageReference.getDownloadUrl().addOnSuccessListener(context, new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        dishProvider.setDishUrlPhoto(uri.toString());
+                        firebaseFirestore.collection("userAdmin").document("cardapio")
+                                .collection("pratos").document(dishProvider.getDishUid()).set(dishProvider)
+                                .addOnCompleteListener(context, new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        Log.i("logx","SaveDish: "+task.getResult());
+                                        Toast.makeText(context, "Sucesso!", Toast.LENGTH_SHORT).show();
+                                        context.finish();
+
+                                    }
+                                }).addOnFailureListener(context, new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.e("logx","SaveDishException: "+e.getMessage(),e);
+                                Toast.makeText(context, "Algo deu errado, contate o desenvolvedor!", Toast.LENGTH_SHORT).show();
+
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
     }
 }
 

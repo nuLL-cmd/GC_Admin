@@ -5605,8 +5605,8 @@ public final class R {
     public static final int ifRoom=0x7f0a0098;
     public static final int image=0x7f0a0099;
     public static final int img_card_cut=0x7f0a009a;
-    public static final int img_cardapio_layout_celula=0x7f0a009b;
-    public static final int img_cardaptio_edit=0x7f0a009c;
+    public static final int img_dish_layout_celula=0x7f0a009b;
+    public static final int img_dish_preview=0x7f0a009c;
     public static final int img_perfil_main=0x7f0a009d;
     public static final int info=0x7f0a009e;
     public static final int invisible=0x7f0a009f;

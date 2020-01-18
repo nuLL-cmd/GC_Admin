@@ -84,7 +84,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:scaleType="centerCrop"
-                        android:id="@+id/img_cardaptio_edit"
+                        android:id="@+id/img_dish_preview"
                         android:src="@drawable/background_cad" />
 
                     <TextView
@@ -96,6 +96,7 @@
                         android:id="@+id/btn_img_edit"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
+                        android:onClick="getPick"
                         android:src="@drawable/camera_48_white"
                         android:background="@drawable/background_btn_edit"
                         android:layout_alignParentEnd="true"
@@ -213,13 +214,14 @@
                         android:id="@+id/btn_att_edit"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/edt_dishPrice_edit"
+                        android:layout_alignTop="@id/edt_dishPrice_edit"
+                        android:layout_alignEnd="@id/edt_dishFive_edit"
                         android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/edt_dishPrice_edit"
                         android:background="@drawable/background_btn_login"
                         android:fontFamily="@font/akronim"
-                        android:layout_alignEnd = "@id/edt_dishFive_edit"
-                        android:layout_alignTop="@id/edt_dishPrice_edit"
-                        android:text="Atualizar"
+                        android:onClick="saveDish"
+                        android:text="Salvar"
                         android:textColor="#fff"
                         android:textSize="17sp"
                         android:textStyle="bold" />

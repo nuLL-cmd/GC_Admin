@@ -1315,8 +1315,8 @@ id icon_only
 id ifRoom
 id image
 id img_card_cut
-id img_cardapio_layout_celula
-id img_cardaptio_edit
+id img_dish_layout_celula
+id img_dish_preview
 id img_perfil_main
 id info
 id invisible
