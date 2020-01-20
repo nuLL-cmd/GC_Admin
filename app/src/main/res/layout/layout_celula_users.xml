@@ -11,13 +11,13 @@
     app:cardCornerRadius="6dp">
 
     <RelativeLayout
-        android:id="@+id/relative_card_celula_cut"
+        android:id="@+id/relative_card_fidelity_celua"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
 
         <ImageView
-            android:id="@+id/img_card_cut"
+            android:id="@+id/img_userOrders_celula"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/contact_96" />
@@ -26,7 +26,7 @@
             android:id="@+id/txt_name_celula"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/img_card_cut"
+            android:layout_toEndOf="@id/img_userOrders_celula"
             android:layout_marginStart="10dp"
             android:layout_marginTop="15dp"
             android:text="Marco Aurelio Jose"

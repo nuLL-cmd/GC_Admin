@@ -32,7 +32,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/recycler_pedido"
+        android:id="@+id/recycler_fidelity"
         android:layout_alignStart="@id/relative_details_cut"
         android:layout_alignEnd="@id/relative_details_cut"
         tools:listitem="@layout/layout_celula_fidelity"

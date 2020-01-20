@@ -11,54 +11,133 @@
     app:cardCornerRadius="6dp">
 
     <RelativeLayout
-        android:id="@+id/relative_card_celula_cut"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/img_card_cut"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/food_blue" />
-
-        <TextView
-            android:id="@+id/txt_data_celula"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
-            android:text="20-11-2019"
-            android:textColor="#115D9F"
-            android:textSize="13sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/lbl_price_celula"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txt_data_celula"
-            android:layout_alignStart="@id/txt_data_celula"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            android:text="R$"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/txt_price_celula"
+        <RelativeLayout
+            android:id="@+id/relative_card_fidelity_celua"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/lbl_price_celula"
-            android:layout_alignBottom="@id/lbl_price_celula"
-            android:layout_marginStart="5dp"
-            android:layout_toEndOf="@id/lbl_price_celula"
-            android:text="10.00"
-            android:textColor="#286C2B"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_userOrders_celula"
+                android:layout_width="100dp"
+                android:layout_centerVertical="true"
+                android:layout_height="100dp"
+                android:src="@drawable/contact_96" />
+
+            <TextView
+                android:id="@+id/txt_nameOrder_celula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/img_userOrders_celula"
+                android:layout_marginStart="10dp"
+                android:layout_alignTop="@id/img_userOrders_celula"
+
+                android:text="Marco Aurelio Jose Francisco"
+                android:textColor="#115D9F"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_price_celula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_nameOrder_celula"
+                android:layout_alignStart="@id/txt_nameOrder_celula"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="R$"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_totalOrders_celula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/lbl_price_celula"
+                android:layout_alignBottom="@id/lbl_price_celula"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/lbl_price_celula"
+                android:text="10.00"
+                android:textColor="#286C2B"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_productOrder_celula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jantinha Alacarte"
+                android:textStyle="bold"
+                android:layout_alignStart="@id/txt_itemOrder_celula"
+                android:layout_above="@id/txt_itemOrder_celula" />
+
+
+
+            <TextView
+                android:id="@+id/txt_itemOrder_celula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contra file"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:layout_alignBottom="@id/img_userOrders_celula"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/img_userOrders_celula"/>
+
+
+
+            <TextView
+                android:id="@+id/txt_sitOrder_celula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PENDENTE"
+                android:textStyle="bold"
+                android:textColor="#0D2BEC"
+                android:textSize="17sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="6dp"
+            android:layout_below="@id/relative_card_fidelity_celua">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/txt_dataOrder_celula"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="20/01/2019"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="#8E24AA"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txt_HoraOrder_celula"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="19:25"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="#8E24AA"
+                    android:gravity="center"/>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
     </RelativeLayout>
-
-
 </androidx.cardview.widget.CardView>

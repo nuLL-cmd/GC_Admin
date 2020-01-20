@@ -62,5 +62,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void nextActivityFidelity(View view0){
+        if (!FidelityActivity.status){
+            Intent intent = new Intent(this, FidelityActivity.class);
+            startActivity(intent);
+        }
+    }
+    public void nextActivityOrders(View view){
+        if (!OrdersActivity.status){
+            Intent intent = new Intent(this, OrdersActivity.class);
+            startActivity(intent);
+        }
+    }
+
 }
 

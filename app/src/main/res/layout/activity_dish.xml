@@ -9,7 +9,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/appbar_cardapio">
+        android:id="@+id/appbar_orders">
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -21,8 +21,8 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
                     android:layout_marginTop="5dp"
                     android:layout_toStartOf="@id/txt_title_contato"
                     android:layout_marginEnd="10dp"
@@ -45,7 +45,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/appbar_cardapio"
+        android:layout_below="@id/appbar_orders"
         android:id="@+id/recycler_dish"
         tools:listitem="@layout/layout_celula_cardapio"/>
 
