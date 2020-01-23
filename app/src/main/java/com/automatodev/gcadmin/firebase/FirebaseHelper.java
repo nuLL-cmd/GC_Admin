@@ -45,6 +45,7 @@ public class FirebaseHelper {
     private FirebaseAuth firebaseAuth;
     private DocumentReference documentReference;
     private FirebaseStorage firebaseStorage;
+
     public FirebaseHelper(Activity context) {
 
         this.context = context;
@@ -107,7 +108,7 @@ public class FirebaseHelper {
                         if (doc.exists()) {
                             UserProvider userProvider = doc.toObject(UserProvider.class);
                             assert userProvider != null;
-                            txt_phone_main.setText(userProvider.getUserPhone());
+                            txt_phone_main.setText(formatPhone(userProvider.getUserPhone()));
                             txt_user_main.setText(userProvider.getUserUser());
                             txt_name_main.setText(userProvider.getUserName());
                             txt_email_main.setText(userProvider.getUserEmail());
@@ -121,20 +122,20 @@ public class FirebaseHelper {
         });
     }
 
-    public List<DishProvider> fireDishGet(){
+    public List<DishProvider> fireDishGet() {
         final List<DishProvider> dishProviderList = new ArrayList<>();
         firebaseFirestore.collection("userAdmin").document("cardapio")
                 .collection("pratos").get()
                 .addOnCompleteListener(context, new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                       dishProviderList.clear();
-                       if (task.isSuccessful()){
-                           for (QueryDocumentSnapshot doc: task.getResult()){
-                               dishProviderList.add(doc.toObject(DishProvider.class));
-                           }
-                       }
-                        Toast.makeText(context, "teste: "+dishProviderList.get(0).getDishName(), Toast.LENGTH_SHORT).show();
+                        dishProviderList.clear();
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot doc : task.getResult()) {
+                                dishProviderList.add(doc.toObject(DishProvider.class));
+                            }
+                        }
+                        Toast.makeText(context, "teste: " + dishProviderList.get(0).getDishName(), Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -142,7 +143,25 @@ public class FirebaseHelper {
     }
 
     public void fireSaveDish(final DishProvider dishProvider, Uri uri) {
-        final StorageReference storageReference = firebaseStorage.getReference("/image/"+dishProvider.getDishUid());
+/*        firebaseFirestore.collection("userAdmin").document("cardapio")
+                .collection("pratos").document(dishProvider.getDishUid()).set(dishProvider)
+                .addOnCompleteListener(context, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Log.i("logx","SaveDish: "+task.getResult());
+                        Toast.makeText(context, "Sucesso!", Toast.LENGTH_SHORT).show();
+                        context.finish();
+
+                    }
+                }).addOnFailureListener(context, new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.e("logx","SaveDishException: "+e.getMessage(),e);
+                Toast.makeText(context, "Algo deu errado, contate o desenvolvedor!", Toast.LENGTH_SHORT).show();
+
+            }
+        });*/
+        final StorageReference storageReference = firebaseStorage.getReference("/useAdmin/dish/images/" + dishProvider.getDishUid());
         storageReference.putFile(uri).addOnSuccessListener(context, new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -155,7 +174,7 @@ public class FirebaseHelper {
                                 .addOnCompleteListener(context, new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
-                                        Log.i("logx","SaveDish: "+task.getResult());
+                                        Log.i("logx", "SaveDish: " + task.getResult());
                                         Toast.makeText(context, "Sucesso!", Toast.LENGTH_SHORT).show();
                                         context.finish();
 
@@ -163,7 +182,7 @@ public class FirebaseHelper {
                                 }).addOnFailureListener(context, new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Log.e("logx","SaveDishException: "+e.getMessage(),e);
+                                Log.e("logx", "SaveDishException: " + e.getMessage(), e);
                                 Toast.makeText(context, "Algo deu errado, contate o desenvolvedor!", Toast.LENGTH_SHORT).show();
 
                             }
@@ -174,5 +193,11 @@ public class FirebaseHelper {
         });
 
     }
+
+    private String formatPhone(String phone) {
+        phone = phone.substring(0, 5) + "-" + phone.substring(5, 9);
+        return phone;
+    }
+
 }
 

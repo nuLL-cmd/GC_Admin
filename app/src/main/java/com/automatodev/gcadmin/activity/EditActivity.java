@@ -67,10 +67,10 @@ public class EditActivity extends AppCompatActivity {
         field[6] = edt_dishPrice_edit.getText().toString();
         int count = 0;
 
-        if (field[6].trim().isEmpty() || uri == null){
-            Toast.makeText(this, "O produto precisa de um preço e uma imagem!!", Toast.LENGTH_SHORT).show();
-            return;
-        }
+            if (field[6].trim().isEmpty() || uri == null){
+                Toast.makeText(this, "O produto precisa de um preço e uma imagem!!", Toast.LENGTH_SHORT).show();
+                return;
+            }
         for (String f: field){
             if (f.trim().isEmpty()){
                 count++;

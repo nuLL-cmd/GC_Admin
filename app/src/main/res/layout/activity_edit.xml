@@ -85,7 +85,7 @@
                         android:layout_height="190dp"
                         android:scaleType="centerCrop"
                         android:id="@+id/img_dish_preview"
-                        android:src="@drawable/background_cad" />
+                      />
 
                     <TextView
                         android:layout_width="match_parent"

@@ -1,6 +1,7 @@
 package com.automatodev.gcadmin.activity;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +26,7 @@ public class FidelityActivity extends AppCompatActivity {
     private RecyclerView recycler_fidelity;
     private FidelityAdapter adapter;
     private FirebaseFirestore firestore;
+    private TextView txt_totalFidelity_fidelity;
 
 
 
@@ -34,7 +36,7 @@ public class FidelityActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fidelity);
 
         recycler_fidelity = findViewById(R.id.recycler_fidelity);
-
+        txt_totalFidelity_fidelity = findViewById(R.id.txt_totalFidelity_fidelity);
         firestore = FirebaseFirestore.getInstance();
 
         showDataFidelity();
@@ -58,8 +60,10 @@ public class FidelityActivity extends AppCompatActivity {
                         for (DocumentSnapshot doc: docs){
                             fidelityProviders.add(doc.toObject(FidelityProvider.class));
                         }
-
                         adapter.notifyDataSetChanged();
+                        if (fidelityProviders.size() != 0)
+                            txt_totalFidelity_fidelity.setText(String.valueOf(fidelityProviders.size()));
+
                     }
                 });
     }

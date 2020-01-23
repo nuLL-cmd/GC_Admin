@@ -1,6 +1,8 @@
 package com.automatodev.gcadmin.activity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,12 +29,14 @@ public class UsersActivity extends AppCompatActivity {
     private FirebaseHelper firebaseHelper;
     private RecyclerView recycler_usrs;
     private FirebaseFirestore firebaseFirestore;
+    private TextView txt_userTotal_users;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users);
 
+        txt_userTotal_users = findViewById(R.id.txt_userTotal_users);
         recycler_usrs = findViewById(R.id.recycler_users);
         firebaseFirestore = FirebaseFirestore.getInstance();
         getDataUsers();
@@ -62,6 +66,7 @@ public class UsersActivity extends AppCompatActivity {
 
     public void fireGetUsers(){
         firebaseFirestore.collection("users").addSnapshotListener(this, new EventListener<QuerySnapshot>() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
                 usersProviderList.clear();
@@ -70,6 +75,8 @@ public class UsersActivity extends AppCompatActivity {
                 for (DocumentSnapshot doc: docs){
                     usersProviderList.add(doc.toObject(UsersProvider.class));
                 }
+                if (usersProviderList.size() != 0)
+                    txt_userTotal_users.setText(String.valueOf(usersProviderList.size()));
             }
         });
 

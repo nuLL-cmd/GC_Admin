@@ -12,7 +12,7 @@ public class UsersProvider implements Parcelable {
     private String userUser;
     private String userPhone;
     private String userUid;
-
+    private String userUrlPhoto;
     private String userStreet;
     private String userNumberHome;
     private int userCep;
@@ -49,6 +49,7 @@ public class UsersProvider implements Parcelable {
         userUser = in.readString();
         userPhone = in.readString();
         userUid = in.readString();
+        userUrlPhoto = in.readString();
 
         userStreet = in.readString();
         userNumberHome = in.readString();
@@ -77,6 +78,10 @@ public class UsersProvider implements Parcelable {
 
     public String getUserEmail() {
         return userEmail;
+    }
+
+    public String getUserUrlPhoto() {
+        return userUrlPhoto;
     }
 
     public String getUserUser() {
@@ -131,7 +136,7 @@ public class UsersProvider implements Parcelable {
         dest.writeString(userUser);
         dest.writeString(userPhone);
         dest.writeString(userUid);
-
+        dest.writeString(userUrlPhoto);
         dest.writeString(userStreet);
         dest.writeString(userNumberHome);
         dest.writeInt(userCep);
@@ -148,6 +153,7 @@ public class UsersProvider implements Parcelable {
         result.put("userUser", userUser);
         result.put("userPhone",userPhone);
         result.put("userUid",userUid);
+        result.put("userUrlPhoto",userUrlPhoto);
 
         result.put("userStreet",userStreet);
         result.put("userNumberHome",userNumberHome);

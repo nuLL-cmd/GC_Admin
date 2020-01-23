@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:text="PENDENTE"
                 android:textStyle="bold"
-                android:textColor="#0D2BEC"
+                android:textColor="#FB8C00"
                 android:textSize="17sp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"/>
@@ -122,7 +122,7 @@
                     android:text="20/01/2019"
                     android:textStyle="bold"
                     android:textSize="16dp"
-                    android:textColor="#8E24AA"
+                    android:textColor="#FB8C00"
                     android:gravity="center"/>
 
                 <TextView
@@ -133,7 +133,7 @@
                     android:textStyle="bold"
                     android:textSize="16dp"
                     android:layout_alignParentEnd="true"
-                    android:textColor="#8E24AA"
+                    android:textColor="#FB8C00"
                     android:gravity="center"/>
             </RelativeLayout>
 

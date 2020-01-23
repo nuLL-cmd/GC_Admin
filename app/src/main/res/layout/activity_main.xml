@@ -61,7 +61,6 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             app:cardCornerRadius="6dp"
-
             app:cardElevation="-3dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -152,7 +151,7 @@
                     android:layout_alignTop="@id/txt_comming_main"
                     android:layout_alignEnd="@id/btn_settings_main"
                     android:gravity="center"
-                    android:text="Tools Dev."
+                    android:textColor="#fff"
                     android:textStyle="bold" />
 
                 <ImageButton
@@ -162,8 +161,7 @@
                     android:layout_below="@id/txt_settings_main"
                     android:layout_alignParentEnd="true"
                     android:background="#FFF"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/tools" />
+                    android:scaleType="fitCenter" />
 
                 <TextView
                     android:id="@+id/txt_comming_main"

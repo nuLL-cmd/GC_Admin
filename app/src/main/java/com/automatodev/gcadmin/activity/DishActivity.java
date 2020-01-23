@@ -41,7 +41,7 @@ public class DishActivity extends AppCompatActivity {
         firebaseOper = new FirebaseHelper(this);
 
         showDataDish();
-        fireDishGet();
+
     }
 
     @Override
@@ -67,7 +67,7 @@ public class DishActivity extends AppCompatActivity {
         recycler_dish.hasFixedSize();
         recycler_dish.setLayoutManager(new LinearLayoutManager(this));
         dishProviderList = new ArrayList<>();
-        dishAdapter = new DishAdapter(dishProviderList);
+        dishAdapter = new DishAdapter(dishProviderList, this);
         recycler_dish.setAdapter(dishAdapter);
 
     }

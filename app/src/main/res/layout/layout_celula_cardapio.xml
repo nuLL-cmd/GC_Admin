@@ -23,8 +23,7 @@
                 android:id="@+id/img_dish_layout_celula"
                 android:layout_width="150dp"
                 android:layout_height="100dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/background_img_layout_cardapio" />
+                android:scaleType="centerCrop" />
 
 
         </androidx.cardview.widget.CardView>

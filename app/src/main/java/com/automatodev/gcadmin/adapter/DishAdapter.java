@@ -1,5 +1,6 @@
 package com.automatodev.gcadmin.adapter;
 
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,15 +12,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.automatodev.gcadmin.R;
 import com.automatodev.gcadmin.provider.DishProvider;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 
 import java.util.List;
 
 public class DishAdapter extends RecyclerView.Adapter<DishAdapter.DataHandler> {
-    List<DishProvider> dishProviderList;
+    private List<DishProvider> dishProviderList;
+    private Activity context;
 
-    public DishAdapter(List<DishProvider> dishProviderList) {
+    public DishAdapter(List<DishProvider> dishProviderList, Activity context) {
         this.dishProviderList = dishProviderList;
+        this.context = context;
     }
 
     @NonNull
@@ -31,12 +35,13 @@ public class DishAdapter extends RecyclerView.Adapter<DishAdapter.DataHandler> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DishAdapter.DataHandler holder, int position) {
+    public void onBindViewHolder(@NonNull DishAdapter.DataHandler holder, int position) { ;
         DishProvider dishProvider = dishProviderList.get(position);
         holder.txt_ingrediente_layout_celula.setText(dishProvider.getDishDescOne());
         holder.txt_item_title_layout_celula.setText(dishProvider.getDishName());
         holder.txt_price_layout.setText(String.valueOf(dishProvider.getDishValue()));
-        Picasso.get().load(dishProvider.getDishUrlPhoto()).into(holder.img_dish_layout_celula);
+        Glide.with(context).load(dishProvider.getDishUrlPhoto()).centerCrop().transition(DrawableTransitionOptions.withCrossFade())
+                .into(holder.img_dish_layout_celula);
     }
 
     @Override

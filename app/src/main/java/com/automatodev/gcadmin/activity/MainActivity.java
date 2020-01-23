@@ -23,13 +23,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         firebaseHelper = new FirebaseHelper(this);
 
-        firebaseHelper.fireGetUser(FirebaseAuth.getInstance().getCurrentUser().getUid());
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        this.finishAffinity();
+
     }
 
     @Override
-    protected void onRestart() {
-        super.onRestart();
+    protected void onStart() {
+        super.onStart();
         status = true;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        firebaseHelper.fireGetUser(FirebaseAuth.getInstance().getCurrentUser().getUid());
     }
 
     @Override
@@ -47,14 +58,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        this.finishAffinity();
-
-    }
-
     public void nextActivityCardapio(View view){
         if (!DishActivity.status){
             Intent intent = new Intent(this, DishActivity.class);

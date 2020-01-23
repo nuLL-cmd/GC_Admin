@@ -1052,6 +1052,7 @@ drawable abc_vector_test
 drawable about_white
 drawable avd_hide_password
 drawable avd_show_password
+drawable back_image_256
 drawable background_btn_details
 drawable background_btn_edit
 drawable background_btn_f2
@@ -1077,6 +1078,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable camera_48_white
 drawable card_blue
+drawable carshopping_96
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1119,6 +1121,7 @@ drawable ic_card_giftcard_black_24dp
 drawable ic_cardapio_sgv
 drawable ic_cash_32dp
 drawable ic_cep_black_24dp
+drawable ic_credit_card_48dp
 drawable ic_email_black_24dp
 drawable ic_home_black_24dp
 drawable ic_launcher_background
@@ -1307,6 +1310,7 @@ id filled
 id fixed
 id forever
 id ghost_view
+id glide_custom_view_target_tag
 id gone
 id group_divider
 id groups
@@ -1321,6 +1325,8 @@ id img_dish_layout_celula
 id img_dish_preview
 id img_fidelity_celula
 id img_perfil_main
+id img_totalFidelity_fidelity
+id img_totalUsers_users
 id img_userOrders_celula
 id info
 id invisible
@@ -1334,7 +1340,6 @@ id lbl_phone_main
 id lbl_price_celula
 id lbl_price_layout_celula
 id lbl_totalOrder_celula
-id lbl_userTotal_users
 id lbl_user_main
 id left
 id light
@@ -1488,7 +1493,9 @@ id txt_settings_main
 id txt_sitOrder_celula
 id txt_title_contato
 id txt_title_orders
+id txt_totalFidelity_fidelity
 id txt_totalOrders_celula
+id txt_userTotal_users
 id txt_user_main
 id txt_warning_edit
 id unchecked
