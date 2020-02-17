@@ -1338,7 +1338,6 @@ id lbl_email_main
 id lbl_name_main
 id lbl_phone_main
 id lbl_price_celula
-id lbl_price_layout_celula
 id lbl_totalOrder_celula
 id lbl_user_main
 id left

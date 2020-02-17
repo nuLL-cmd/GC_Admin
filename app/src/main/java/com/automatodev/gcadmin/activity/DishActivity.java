@@ -1,9 +1,13 @@
 package com.automatodev.gcadmin.activity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,6 +17,8 @@ import com.automatodev.gcadmin.R;
 import com.automatodev.gcadmin.adapter.DishAdapter;
 import com.automatodev.gcadmin.firebase.FirebaseHelper;
 import com.automatodev.gcadmin.provider.DishProvider;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -41,6 +47,7 @@ public class DishActivity extends AppCompatActivity {
         firebaseOper = new FirebaseHelper(this);
 
         showDataDish();
+        onLongClick();
 
     }
 
@@ -94,5 +101,32 @@ public class DishActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         fireDishGet();
+    }
+    private void onLongClick(){
+        dishAdapter.setOnItemLongClickListener(new DishAdapter.OnItemLongClickListener() {
+            @Override
+            public void setOnItemLongClickListener(final int position) {
+                AlertDialog.Builder alert = new AlertDialog.Builder(DishActivity.this);
+                alert.setTitle("Dados serão apagados!");
+                alert.setMessage("Deseja apagar o prato \n"+ dishProviderList.get(position).getDishName());
+                alert.setPositiveButton("Sim", new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface dialog, int witch){
+                        firebaseFirestore.collection("userAdmin").document("cardapio").collection("pratos")
+                                .document(dishProviderList.get(position).getDishUid())
+                                .delete()
+                                .addOnCompleteListener(DishActivity.this, new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        Toast.makeText(DishActivity.this, "Sucesso!", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                    }
+                });
+                alert.setNegativeButton("Não",null);
+                alert.show();
+
+            }
+        });
     }
 }
