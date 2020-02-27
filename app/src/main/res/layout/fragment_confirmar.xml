@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#FB8C00"
     android:layout_height="match_parent">
 
     <!-- TODO: Update blank fragment layout -->
@@ -10,19 +11,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/txt_delivered_delivered"
-        android:id="@+id/recycler_delivered"
+        android:id="@+id/recycler_confirm"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
         tools:listitem="@layout/layout_celula_pedidos" />
 
     <TextView
         android:id="@+id/txt_delivered_delivered"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="PEDIDOS PENDENTES"
+        android:text="Pendentes"
+        android:textColor="#fff"
         android:textAlignment="center"
-        android:textColor="#FB8C00"
+
         android:textSize="20sp"
         android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_list_icon"
+        android:layout_toStartOf="@id/txt_delivered_delivered"
+        android:layout_alignTop="@id/txt_delivered_delivered"
+        android:layout_marginEnd="5dp"
+        android:layout_alignBottom="@id/txt_delivered_delivered"/>
+
+
+
 </RelativeLayout>

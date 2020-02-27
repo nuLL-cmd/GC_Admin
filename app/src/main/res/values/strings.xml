@@ -2,4 +2,7 @@
     <string name="app_name">GC Admin</string>
     <string name="content">Utilize imagens com resolução baixa exemplo (420*254). Não há necessaide de upar imagens pesadas, isso inpacta no desempenho tanto para o admin quanto para o usuario, utilize imagens de ate 500kbps,
        pois se tratando de aplicação mobile, nao há necessidade de imagens com resoluções gigantescas :D</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

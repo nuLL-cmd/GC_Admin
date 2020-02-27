@@ -1,143 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/card_celula_cut"
-    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="6dp"
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp"
-    app:cardCornerRadius="6dp">
-
+    android:layout_marginTop="5dp"
+    app:cardCornerRadius="6dp"
+    android:layout_width="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:id="@+id/relative_card_fidelity_celua"
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/card_celula_cut"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="6dp">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/img_userOrders_celula"
-                android:layout_width="100dp"
-                android:layout_centerVertical="true"
-                android:layout_height="100dp"
-                android:src="@drawable/contact_96" />
-
-            <TextView
-                android:id="@+id/txt_nameOrder_celula"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:id="@+id/relative_card_fidelity_celua"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/img_userOrders_celula"
-                android:layout_marginStart="10dp"
-                android:layout_alignTop="@id/img_userOrders_celula"
+                android:padding="10dp">
 
-                android:text="Marco Aurelio Jose Francisco"
-                android:textColor="#115D9F"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_userOrders_celula"
+                    android:layout_width="50dp"
+                    android:layout_centerVertical="true"
+                    app:civ_border_width="3dp"
+                    app:civ_border_color="@android:color/darker_gray"
+                    android:layout_height="50dp"
+                    android:src="@drawable/contact_96" />
 
-            <TextView
-                android:id="@+id/lbl_price_celula"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txt_nameOrder_celula"
-                android:layout_alignStart="@id/txt_nameOrder_celula"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:text="R$"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txt_nameOrder_celula"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/img_userOrders_celula"
+                    android:layout_marginStart="10dp"
+                    android:layout_alignTop="@id/img_userOrders_celula"
 
-            <TextView
-                android:id="@+id/txt_totalOrders_celula"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/lbl_price_celula"
-                android:layout_alignBottom="@id/lbl_price_celula"
-                android:layout_marginStart="5dp"
-                android:layout_toEndOf="@id/lbl_price_celula"
-                android:text="10.00"
-                android:textColor="#286C2B"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                    android:text="Marco Aurelio Jose Francisco"
 
-            <TextView
-                android:id="@+id/txt_productOrder_celula"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Jantinha Alacarte"
-                android:textStyle="bold"
-                android:layout_alignStart="@id/txt_itemOrder_celula"
-                android:layout_above="@id/txt_itemOrder_celula" />
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lbl_price_celula"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_nameOrder_celula"
+                    android:layout_alignStart="@id/txt_nameOrder_celula"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Total:"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_totalOrders_celula"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/lbl_price_celula"
+                    android:layout_alignBottom="@id/lbl_price_celula"
+                    android:layout_toEndOf="@id/lbl_price_celula"
+                    android:text="10.00"
+                    android:textSize="12sp"
+                    android:layout_marginStart="5dp"
+                    android:textColor="#286C2B"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_qtd_orders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Itens"
+                    android:layout_alignStart="@id/lbl_price_celula"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/lbl_price_celula"
+                    />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_pending"
+                    android:src="@drawable/pending"/>
 
 
 
-            <TextView
-                android:id="@+id/txt_itemOrder_celula"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Contra file"
-                android:layout_marginStart="10dp"
-                android:textStyle="bold"
-                android:layout_alignBottom="@id/img_userOrders_celula"
-                android:layout_marginTop="5dp"
-                android:layout_toEndOf="@id/img_userOrders_celula"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pendente"
+                    android:layout_below="@id/txt_qtd_orders"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:id="@+id/txt_pending"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/txt_itemOrder_celula"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textSize="12sp"
+                    android:layout_alignTop="@id/txt_qtd_orders"
+                    android:layout_marginStart="5dp"
+                    android:layout_alignBottom="@id/txt_qtd_orders"
+                    android:textColor="#286C2B"
+                    android:layout_toEndOf="@id/txt_qtd_orders"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
 
 
+            </RelativeLayout>
 
-            <TextView
-                android:id="@+id/txt_sitOrder_celula"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="PENDENTE"
-                android:textStyle="bold"
-                android:textColor="#FB8C00"
-                android:textSize="17sp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"/>
-
-        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="6dp"
-            android:layout_below="@id/relative_card_fidelity_celua">
+            android:layout_height="60dp"
+            android:layout_below="@id/card_celula_cut"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp"
+            android:id="@+id/card_dataHora"
+            android:layout_marginEnd="10dp"
+            app:cardElevation="5dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="6dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="10dp">
 
+                <ImageView
+                    android:id="@+id/img_date"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/calendar5"/>
+
+                <ImageView
+                    android:id="@+id/img_hour"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/cash10"/>
+
 
                 <TextView
                     android:id="@+id/txt_dataOrder_celula"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text="20/01/2019"
-                    android:textStyle="bold"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/img_date"
                     android:textSize="16dp"
-                    android:textColor="#FB8C00"
-                    android:gravity="center"/>
+                    />
 
                 <TextView
                     android:id="@+id/txt_HoraOrder_celula"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_toStartOf="@id/img_hour"
+                    android:gravity="center"
                     android:text="19:25"
-                    android:textStyle="bold"
+                    android:layout_marginEnd="5dp"
                     android:textSize="16dp"
-                    android:layout_alignParentEnd="true"
-                    android:textColor="#FB8C00"
-                    android:gravity="center"/>
+                    />
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
-
     </RelativeLayout>
+
 </androidx.cardview.widget.CardView>

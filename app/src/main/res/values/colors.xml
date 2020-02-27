@@ -3,4 +3,8 @@
     <color name="colorPrimary">#ff8f00</color>
     <color name="colorPrimaryDark">#ff8f00</color>
     <color name="colorAccent">#ffc046</color>
+    <color name="confirmar">#1E88E5</color>
+    <color name="preparacao">#E53935</color>
+    <color name="entregar">#7CB342</color>
+    <color name="entregue">#43A047</color>
 </resources>

@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#ECECEC"
     android:layout_height="match_parent">
 
 
@@ -83,7 +84,7 @@
                     android:layout_alignEnd="@id/btn_cardapio_main"
                     android:gravity="center"
                     android:text="Usuarios"
-                    android:textStyle="bold" />
+                     />
 
                 <ImageButton
                     android:id="@+id/btn_cardapio_main"
@@ -104,7 +105,7 @@
                     android:layout_alignEnd="@id/btn_fidelidade_main"
                     android:gravity="center"
                     android:text="Fidelidade"
-                    android:textStyle="bold" />
+                     />
 
                 <ImageButton
                     android:id="@+id/btn_fidelidade_main"
@@ -127,7 +128,7 @@
                     android:layout_toEndOf="@id/txt_cardapio_main"
                     android:gravity="center"
                     android:text="Gerenciar pedidos"
-                    android:textStyle="bold" />
+                     />
 
                 <ImageButton
                     android:id="@+id/btn_pedidos_main"
@@ -152,7 +153,7 @@
                     android:layout_alignEnd="@id/btn_settings_main"
                     android:gravity="center"
                     android:textColor="#fff"
-                    android:textStyle="bold" />
+                     />
 
                 <ImageButton
                     android:id="@+id/btn_settings_main"
@@ -171,7 +172,7 @@
                     android:layout_alignStart="@id/btn_comming_main"
                     android:layout_alignEnd="@id/btn_comming_main"
                     android:gravity="center"
-                    android:textStyle="bold" />
+                     />
 
                 <ImageButton
                     android:id="@+id/btn_comming_main"
@@ -192,7 +193,7 @@
                     android:layout_toEndOf="@id/txt_comming_main"
                     android:gravity="center"
                     android:text="Atualizar cardapio"
-                    android:textStyle="bold" />
+                    />
 
                 <ImageButton
                     android:id="@+id/btn_contact_main"

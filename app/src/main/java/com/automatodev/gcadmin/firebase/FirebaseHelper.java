@@ -87,6 +87,7 @@ public class FirebaseHelper {
         if (firebaseUser != null && !MainActivity.status) {
             Intent intent = new Intent(context, MainActivity.class);
             context.startActivity(intent);
+            context.finish();
 
         }
     }

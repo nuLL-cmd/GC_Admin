@@ -23,7 +23,8 @@ public class OrdersActivity extends AppCompatActivity  {
         view_order = findViewById(R.id.view_orders);
 
         tab_orders.addTab(tab_orders.newTab().setIcon(R.drawable.ic_list_icon));
-        tab_orders.addTab(tab_orders.newTab().setIcon(R.drawable.ic_cancel_black));
+        tab_orders.addTab(tab_orders.newTab().setIcon(R.drawable.ic_cardapio_sgv));
+        tab_orders.addTab(tab_orders.newTab().setIcon(R.drawable.ic_send_black));
         tab_orders.setTabGravity(TabLayout.GRAVITY_FILL);
 
         fragmentAdapter = new FragmentAdapter(getSupportFragmentManager(),tab_orders.getTabCount());
