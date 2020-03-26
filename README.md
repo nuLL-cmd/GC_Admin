@@ -1,21 +1,21 @@
-      # GC_Admin
+# GC_Admin
 
-      Projeto para Cozinharia GC
+GC CozinhariaGC - Admin
 
-      O painel Admin fara o gerenciamento dos pedidos em quatro etapas:
-      *Recebimento
-      *Preparação
-      *Entrega
-      *Entregue
+The Admin panel will manage orders in four steps:
+* Receivement
+* Preparation
+* Delivery
+* Delivered
 
-      O projeto foi desenvolvido em dois modulos Admin e Cliente, no qual tambem esta postado no github, utilizando como linguagem principal 
-      o Java e o ambiente de desenvolvimento Android Studio, foi construindo tendo como base praticas de programação aprendida na faculdade
-      afim de servir como aprendizado de novos metodos e boas praticas de programação.
+The project was developed in two modules, Admin and Client, which is also posted on github, using the main language
+Java and the Android Studio development environment, was built based on programming practices learned in college
+in order to serve as learning new methods and good programming practices.
 
-      O backend foi craido em uma classe de operações separdas que contem alem das 4 operações CRUD, algumas features para facilitar as
-      tarefas do projeto.
+The backend was created in a class of separd operations that contains in addition to the 4 CRUD operations, some features to facilitate
+project tasks.
 
-      Linguagem utilizada: Java 
-      Banco de dados: Firebase NOSQL
-      Versão do SDK: 1.8.0
-      Versao do AS: 3.5.3
+Language used: Java
+Database: Firebase NOSQL
+SDK Version: 1.8.0
+AS version: 3.5.3
